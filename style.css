@@ -6,6 +6,13 @@ body {
   display: flex;
   justify-content: center;
 }
+.title {
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #000000dd;
+}
 
 .comments {
   list-style-type: none;
