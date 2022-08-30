@@ -31,7 +31,7 @@ body {
   margin-top: 10px;
 }
 .comment-input {
-  width: 83%;
+  width: 85%;
   border: none;
   font-size: 0.8rem;
 }
@@ -80,4 +80,10 @@ body {
   justify-content: left;
   width: 90px;
 }
-
+.image {
+  width: 500px;
+  /* border: 1px solid black; */
+}
+.image-card {
+  width: 500px;
+}
