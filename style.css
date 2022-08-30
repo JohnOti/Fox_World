@@ -75,3 +75,9 @@ body {
 .comment-button:focus {
   outline: none;
 }
+.logo {
+  margin-bottom: 20px;
+  justify-content: left;
+  width: 90px;
+}
+
