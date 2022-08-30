@@ -17,9 +17,7 @@ const imageRot=fetch(url)
       
     function renderImage(data){
       cardImage.src=data.image
-      window.onload = function () {
-        setInterval(change, 5000);
-    };
+    
     }
 
   
