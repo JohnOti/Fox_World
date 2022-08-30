@@ -1,14 +1,43 @@
 body {
   background-color:blanchedalmond
 }
-
-
-.rating {
-  display: inline-block;
+.image-container {
   width: 100%;
-  margin-top: 40px;
-  padding-top: 40px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.comments {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 10px;
+  font-size: 0.85rem;
+}
+.comments li {
+  margin: 2px 0;
+  letter-spacing: 0.2px;
+}
+.comment-form {
+  width: 100%;
+  border-top: 1px solid #00000020;
+  padding: 10px;
+  margin-top: 10px;
+}
+.comment-input {
+  width: 83%;
+  border: none;
+  font-size: 0.8rem;
+}
+
+.comment-input:focus {
+  outline: none;
+}
+
+.likes-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
 }
 
 .like,
@@ -27,4 +56,15 @@ body {
 
 .active {
   color: #2EBDD1;
+}
+.comment-button:hover {
+  color: rgb(37, 68, 245);
+}
+
+.comment-button:active {
+  color: rgb(127, 146, 250);
+}
+
+.comment-button:focus {
+  outline: none;
 }
