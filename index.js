@@ -53,6 +53,9 @@ function renderComment(comment){
   const li=document.createElement("li")
   li.innerHTML=comment.content
   document.getElementById("comments-list").append(li)
+  li.addEventListener("click",()=>{
+  li.style.display="none"
+  })
 }
 function addComment(event){
   event.preventDefault();
