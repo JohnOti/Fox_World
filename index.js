@@ -1,25 +1,25 @@
-document.addEventListener('DOMContentLoaded', (event)=>{
-const imageCard=document.getElementById("imageCard")
 const cardImage=document.getElementById("card-image")
-const likeCount=document.getElementById("like-count")
-const cardTitle=document.getElementById("card-title")
-const addLike=document.getElementById("add-like")
-const disLike=document.getElementById("remove-like")
-const commentsLst=document.getElementById("comments-list")
-const url='https://randomfox.ca/floof/'
-let likes = 0;
-
-
-
-const imageRot=fetch(url)
+function MyFunc () 
+{fetch(url)
     .then((response) => response.json())
     .then(renderImage);
-      
+    
+cardImage.addEventListener("mouseover",blurImage);   
     function renderImage(data){
       cardImage.src=data.image
-      // renderComments(data.comments);
     }
-    
+  }
+  const imageCard=document.getElementById("imageCard")
+  const likeCount=document.getElementById("like-count")
+  const cardTitle=document.getElementById("card-title") 
+  const disLike=document.getElementById("remove-like")
+  const commentsLst=document.getElementById("comments-list")
+  const url='https://randomfox.ca/floof/'
+  document.addEventListener('DOMContentLoaded', (event)=>{
+MyFunc();
+let likes = 0;
+
+const addLike=document.getElementById("add-like")   
 
 addLike.addEventListener("click",()=>{
   
@@ -45,10 +45,7 @@ function renderDisLike(){
 
 function renderComments(comments){
   document.getElementById("comments-list").innerHTML="";
-  // comments.forEach(renderComment)
 }
-
-
 function renderComment(comment){
   const li=document.createElement("li")
   li.innerHTML=comment.content
@@ -64,3 +61,15 @@ function addComment(event){
 
   event.target.reset();
 }
+// console.log(document.getElementById("logo"))
+document.getElementById("logo").addEventListener("click",(event)=>{
+  // console.log(event)
+  MyFunc();  
+})
+function blurImage(){
+    cardImage.style.opacity = 0.5;
+}
+function normalImage(){
+  cardImage.style.opacity=1;
+}
+cardImage.addEventListener("mouseout",normalImage)
